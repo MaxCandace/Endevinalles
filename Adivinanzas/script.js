@@ -69,7 +69,7 @@ function mostraQuestio() {
             missatge.textContent = "Has ganado! Has respondido a las preguntas correctamente."
         } else {
 
-            missatge.textContent = `El juego acabó. Respuestas correctas: ${respostesCorrectes}' + 'Respuestas incorrectas: ${respostesIncorrectes}`;
+            missatge.textContent = `El juego acabó. Respuestas correctas: ${respostesCorrectes}` + `Respuestas incorrectas: ${respostesIncorrectes}`;
         }
 
         btnEsquerra.style.display = "none";
