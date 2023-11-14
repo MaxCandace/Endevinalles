@@ -2,13 +2,13 @@
 const questions = [
 
     {
-        questio: "Quin païs té més població?",
+        questio: "Quin país té més població 🗺 ?",
         respostaCorrecta: "La Xina",
         respostaIncorrecta: "L'India",
     },
 
     {
-        questio: "El rpimer astronauta en trepitjar la Terra?",
+        questio: "El pimer astronauta en trepitjar la Lluna? 🌙",
         respostaCorrecta: "Neil Amstrong",
         respostaIncorrecta: "Louis Amstrong",
     }
@@ -26,10 +26,10 @@ let respostesIncorrectes = 0;
 
 //Capturando los elementos HTML a partir de sus id. Seremos capaces de utilizarlos.
 const questioProposada = document.getElementById("questioProposada");
-const btnEsquerra = document.getElementById("btnEsquerra");
-const btnDret = document.getElementById("btnDret");
-const missatge = document.getElementById("missatge");
-const btnReiniciar = document.getElementById("reiniciar");
+const btnEsquerra      = document.getElementById("btnEsquerra");
+const btnDret          = document.getElementById("btnDret");
+const missatge         = document.getElementById("missatge");
+const btnReiniciar     = document.getElementById("reiniciar");
 
 
 
@@ -63,12 +63,15 @@ function mostraQuestio() {
     } else {
 
         //El juego acabó.
-        if(respostesCorrectes === questions.length) {
+        if (respostesCorrectes === questions.length) {
+            
+            questioProposada.textContent = "¡El juego ha acabado!"
 
             missatge.textContent = "Has ganado! Has respondido a las preguntas correctamente."
         } else {
 
-            missatge.textContent = `El juego acabó. Respuestas correctas: ${respostesCorrectes}` + `Respuestas incorrectas: ${respostesIncorrectes}`;
+            missatge.textContent = `El juego acabó. Respuestas correctas: ${respostesCorrectes}` + ` Respuestas incorrectas: ${respostesIncorrectes}`;
+
         }
 
         btnEsquerra.style.display = "none";
@@ -98,7 +101,8 @@ function comprovaResposta(respostaSeleccionada) {
 }
 
 
-//addEvenListener está pendiente de los eventos que ocurran en el botón. En los parentesis ("") pondrdíamos los eventos.
+// addEvenListener está pendiente de los eventos que ocurran en el botón.
+// En los parentesis("") pondrdíamos los eventos.
 btnEsquerra.addEventListener("click", () => comprovaResposta(btnEsquerra.textContent));
 btnDret.addEventListener("click", () => comprovaResposta(btnDret.textContent));
 btnReiniciar.addEventListener("click", () => {
@@ -116,5 +120,5 @@ btnReiniciar.addEventListener("click", () => {
 
 
 
-//Comenzar el juego. Si no lo hiciéramos, el juego nunca se iniciaría.
+// Comenzar el juego. Si no lo hiciéramos, el juego nunca se iniciaría.
 mostraQuestio();
