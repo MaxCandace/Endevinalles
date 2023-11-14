@@ -2,13 +2,13 @@
 const questions = [
 
     {
-        questio: "Quin país té més població?",
+        questio: "Quin país té més població 🗺 ?",
         respostaCorrecta: "La Xina",
         respostaIncorrecta: "L'India",
     },
 
     {
-        questio: "El pimer astronauta en trepitjar la Lluna?",
+        questio: "El pimer astronauta en trepitjar la Lluna? 🌙",
         respostaCorrecta: "Neil Amstrong",
         respostaIncorrecta: "Louis Amstrong",
     }
@@ -63,7 +63,9 @@ function mostraQuestio() {
     } else {
 
         //El juego acabó.
-        if(respostesCorrectes === questions.length) {
+        if (respostesCorrectes === questions.length) {
+            
+            questioProposada.textContent = "¡El juego ha acabado!"
 
             missatge.textContent = "Has ganado! Has respondido a las preguntas correctamente."
         } else {
