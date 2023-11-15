@@ -29,7 +29,7 @@ const questioProposada = document.getElementById("questioProposada");
 const btnEsquerra      = document.getElementById("btnEsquerra");
 const btnDret          = document.getElementById("btnDret");
 const missatge         = document.getElementById("missatge");
-const btnReiniciar     = document.getElementById("reiniciar");
+const btnReiniciar     = document.getElementById("btnReiniciar");
 
 
 
